@@ -3,7 +3,7 @@ import useStore from "../store/useStore";
 import KanjiStroke from "./kanjiStroke";
 import { Badge } from "@/components/ui/badge";
 
-const kanjiInfo = () => {
+const KanjiInfo = () => {
   const data = useStore((state) => state.KanjiData);
 
   return (
@@ -33,4 +33,4 @@ const kanjiInfo = () => {
   );
 };
 
-export default kanjiInfo;
+export default KanjiInfo;

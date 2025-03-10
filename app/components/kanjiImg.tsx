@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import { FileVideoIcon, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import useStore from "../store/useStore";
 import { useState } from "react";
 
-const kanjiImg = () => {
+const KanjiImg = () => {
   const image = useStore((state) => state.KanjiData?.video.poster);
   const videoUrl = useStore((state) => state.KanjiData?.video.webm);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -53,4 +53,4 @@ const kanjiImg = () => {
   );
 };
 
-export default kanjiImg;
+export default KanjiImg;

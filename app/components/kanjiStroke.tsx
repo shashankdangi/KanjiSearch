@@ -1,7 +1,7 @@
 import Image from "next/image";
 import useStore from "../store/useStore";
 
-const kanjiStroke = () => {
+const KanjiStroke = () => {
   const strokes = useStore((state) => state.KanjiData?.strokes.images);
   return (
     <div className=" h-full p-3 flex flex-row gap-2 ">
@@ -20,4 +20,4 @@ const kanjiStroke = () => {
   );
 };
 
-export default kanjiStroke;
+export default KanjiStroke;

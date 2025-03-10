@@ -19,7 +19,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setTheme(mode);
-  }, [mode]);
+  }, [mode, setTheme]);
   return (
     <div className="flex justify-between border-b-2 p-3 items-center ">
       <h1>

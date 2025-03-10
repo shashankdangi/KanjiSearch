@@ -2,7 +2,6 @@
 import KanjiExample from "@/app/components/kanjiExample";
 import KanjiImg from "@/app/components/kanjiImg";
 import KanjiInfo from "@/app/components/kanjiInfo";
-import KanjiStroke from "@/app/components/kanjiStroke";
 import useStore from "@/app/store/useStore";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -15,7 +14,7 @@ const Page = () => {
     if (data === null) {
       router.push("/");
     }
-  }, [data]);
+  }, [data, router]);
   return (
     <>
       <div className="grid p-8 grid-cols-3 w-full gap-4 h-screen">
