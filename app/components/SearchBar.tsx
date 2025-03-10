@@ -19,7 +19,7 @@ interface Variance {
 const SearchBar = ({ variable = "default" }: Variance) => {
   const router = useRouter();
   const [inputValue, setInputValue] = useState("");
-  const { setKanji, setKanjiData, setLoading, setExamples } = useStore(
+  const { setKanji, setKanjiData, setLoading, setExamples, loading } = useStore(
     (state) => state
   );
 
@@ -74,6 +74,8 @@ const SearchBar = ({ variable = "default" }: Variance) => {
         placeholder="Search Kanji"
       />
       <Search className="size-8 hover:cursor-pointer" onClick={handleClick} />
+
+      {loading && <p>Please wait while we loading your kanji ..... </p>}
     </div>
   );
 };
